@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Philip Humble Kelsin</title>
+    <meta name="description"
+        content="WDD 131 course landing page for [Your Name], featuring web development resources and personal background.">
+    <meta name="author" content="Philip Humble Kelsin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        </div>
+        <nav>
+            <a rel="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a rel="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+            <a rel="https://scriptureearth.com" target="_blank">Scripture</a>
+            <a rel="https://finalproject.com" target="_blank">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Philip Humble Kelsin</h1>
+        <div class="grid-container">
+            <section class="card">
+                <div class="card-header">About Me</div>
+                <div class="card-content about-grid">
+                    <div class="about-text">
+                        <p>My name is Philip Humble Kelsin and I am a web developer in training. I am currently focusing
+                            on building
+                            responsive, accessible applications that solve real-world problems.</p>
+                        <h3>Benin City, Edo State, Nigeria</h3>
+                        <hr>
+                        <div class="location-box">
+                            <img src="images/flag.webp" alt="State or Country Flag" class="flag">
+                            <p><em>Official Flag of Nigeria</em></p>
+                        </div>
+                    </div>
+                    <img src="images/profile.webp" alt="Your Profile Picture" class="profile-img">
+                </div>
+            </section>
+            <section class="card">
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-content">
+                    <ul class="resource-list">
+                        <li><a rel="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a rel="https://smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a rel="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a rel="https://w3schools.com" target="_blank">W3Schools</a></li>
+                        <li><a rel="https://udemy.com" target="_blank">Udemy</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Philip Humble Kelsin Benin City, Edo State, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
