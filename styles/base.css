@@ -1,130 +1,118 @@
 :root {
-    --primary-blue: #1e4b6e;
-    /* Deeper, more modern blue */
-    --accent-blue: #2c3e50;
-    --light-bg: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #334155;
-    --text-light: #64748b;
-    --gold: #f1c40f;
+    --primary: #003366;
+    --secondary: #1a252f;
+    --accent: #ffd700;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --nav-link: #ffffff;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: #212121;
+    /* Darker text for better contrast */
     margin: 0;
-    line-height: 1.6;
 }
 
 header {
-    background-color: var(--primary-blue);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
 }
 
 #course-title {
     display: block;
-    text-align: center;
-    color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding: 1.5rem 0;
-    letter-spacing: 1px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: var(--accent-blue);
-    padding: 0.5rem 0;
+    background-color: var(--secondary);
 }
 
 nav a {
-    color: #e2e8f0;
-    padding: 0.8rem 1.5rem;
+    color: var(--nav-link);
+    padding: 1rem 1.5rem;
     text-decoration: none;
-    font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--gold);
+    background-color: var(--accent);
+    color: #000000;
 }
 
-
 main {
-    max-width: 1100px;
-    margin: 3rem auto;
-    padding: 0 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    color: var(--accent-blue);
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 10px;
+    color: var(--primary);
 }
 
-/* Grid Layout */
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* 2/3 for About, 1/3 for Resources */
-    gap: 25px;
+    gap: 20px;
 }
-
 
 .card {
-    background: var(--card-bg);
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid #ddd;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Updated for H2 tag */
 .card-header {
-    background-color: var(--primary-blue);
+    background: var(--primary);
     color: white;
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
-    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
 }
 
 .card-content {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-
-.about-grid {
+.about-top {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-img,
+.flag {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .profile-img {
-    width: 180px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border: 3px solid var(--bg);
 }
 
-.location-box {
+.location-layout {
     display: flex;
-    align-items: center;
     gap: 15px;
-    margin-top: 15px;
+    align-items: center;
 }
-
-.flag {
-    width: 100px;
-    height: auto;
-    border: 1px solid #ddd;
-}
-
 
 .resource-list {
     list-style: none;
@@ -132,15 +120,15 @@ h1 {
 }
 
 .resource-list li {
-    margin-bottom: 12px;
-    padding-left: 15px;
-    border-left: 3px solid var(--gold);
+    margin-bottom: 10px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
 }
 
 .resource-list a {
-    color: var(--primary-blue);
     text-decoration: none;
-    font-weight: 500;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .resource-list a:hover {
@@ -148,27 +136,27 @@ h1 {
 }
 
 footer {
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     color: white;
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
+    padding: 2rem;
+    margin-top: 3rem;
 }
 
 #lastModified {
-    color: var(--gold);
-    font-size: 0.85rem;
+    color: var(--accent);
+    font-size: 0.9rem;
     margin-top: 10px;
 }
-
 
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
 
-    .about-grid {
-        flex-direction: column-reverse;
-        align-items: center;
+    .about-top,
+    .location-layout {
+        flex-direction: column;
+        text-align: center;
     }
 }
