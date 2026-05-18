@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Nigeria - Philip Humble Kelsin</title>
+    <meta name="description"
+        content="A detailed country profile of Nigeria featuring Benin City data and weather analysis.">
+    <meta name="author" content="Philip Humble Kelsin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Landscape of Nigeria" width="500" height="300" loading="lazy">
+            </picture>
+            <section class="card data">
+                <h2 class="card-title">Data</h2>
+                <ul class="stats">
+                    <li><span>Area:</span> 923,769 sq km</li>
+                    <li><span>Population:</span> 218 Million</li>
+                    <li><span>Capital:</span> Abuja</li>
+                    <li><span>Languages:</span> English, Edo, Yoruba</li>
+                    <li><span>Currency:</span> Naira (₦)</li>
+                    <li><span>Time Zone:</span> UTC+1</li>
+                    <li><span>Calling Code:</span> +234</li>
+                    <li><span>Internet TLD:</span> .ng</li>
+                </ul>
+            </section>
+            <section class="card weather">
+                <h2 id="weather-label">Weather</h2>
+                <img src="images/weather.svg" alt="Weather Icon" class="weather-icon-mobile" width="133" height="121"
+                    loading="lazy">
+                <div class="weather-info">
+                    <p><span>Temperature:</span> <span id="temp-val">8</span>°C</p>
+                    <p><span>Conditions:</span> Cloudy</p>
+                    <p><span>Wind:</span> <span id="wind-val">10</span> km/h</p>
+                    <p><span>Wind Chill:</span> <span id="wind-chill"></span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Philip Humble Kelsin Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

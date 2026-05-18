@@ -1,0 +1,141 @@
+:root {
+    --primary: #008751;
+    --secondary: #ffffff;
+    --accent: #333333;
+    --overlay: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #eee;
+    color: var(--accent);
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-container picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card {
+    background-color: var(--secondary);
+    margin: 1rem;
+    padding: 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title,
+#weather-label {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.stats,
+.weather-info {
+    padding: 1rem;
+    list-style: none;
+    margin: 0;
+}
+
+.stats li,
+.weather-info p {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.stats li span,
+.weather-info p span {
+    font-weight: bold;
+}
+
+.weather-icon-mobile {
+    display: block;
+    width: 75px;
+    height: auto;
+    margin: 10px auto;
+    filter: invert(0);
+}
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+        position: relative;
+        display: block;
+    }
+
+    .card.data {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 280px;
+        background-color: var(--overlay);
+        margin: 0;
+    }
+
+    .card.weather {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 250px;
+        background-color: var(--overlay);
+        margin: 0;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    #weather-label::after {
+        content: " ⛅";
+    }
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+#lastModified {
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    display: block;
+}
+
+.stats li span,
+.weather-info p span {
+    color: #000000;
+    font-weight: bold;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: underline;
+}
