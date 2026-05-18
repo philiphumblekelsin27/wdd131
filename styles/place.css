@@ -1,22 +1,26 @@
 :root {
-    --primary: #008751;
-    --secondary: #ffffff;
-    --accent: #333333;
-    --overlay: rgba(255, 255, 255, 0.85);
+    --primary-color: #008751;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --label-color: #000000;
+    --bg-light: #f0f0f0;
+    --overlay-bg: rgba(255, 255, 255, 0.85);
+    --accent-gold: #ffd700;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #eee;
-    color: var(--accent);
+    background-color: var(--bg-light);
+    color: var(--text-color);
 }
 
 header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1,
@@ -37,17 +41,17 @@ h2 {
 }
 
 .card {
-    background-color: var(--secondary);
+    background-color: var(--secondary-color);
     margin: 1rem;
     padding: 0;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-title,
 #weather-label {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 0.8rem;
     text-align: center;
     font-size: 1.2rem;
@@ -60,10 +64,9 @@ h2 {
     margin: 0;
 }
 
-/* Consolidated Rule: This now only appears ONCE to pass the audit */
 .stats li span,
 .weather-info p span {
-    color: #000000;
+    color: var(--label-color);
     font-weight: bold;
 }
 
@@ -72,7 +75,6 @@ h2 {
     width: 75px;
     height: auto;
     margin: 10px auto;
-    filter: invert(0);
 }
 
 @media screen and (min-width: 768px) {
@@ -86,7 +88,7 @@ h2 {
         top: 2rem;
         left: 2rem;
         width: 280px;
-        background-color: var(--overlay);
+        background-color: var(--overlay-bg);
         margin: 0;
     }
 
@@ -95,7 +97,7 @@ h2 {
         bottom: 2rem;
         right: 2rem;
         width: 250px;
-        background-color: var(--overlay);
+        background-color: var(--overlay-bg);
         margin: 0;
     }
 
@@ -109,21 +111,21 @@ h2 {
 }
 
 footer {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 2rem;
     margin-top: 1rem;
 }
 
 #lastModified {
-    color: #ffffff;
+    color: var(--secondary-color);
     font-size: 0.85rem;
     margin-top: 10px;
     display: block;
 }
 
 a {
-    color: var(--primary);
+    color: var(--primary-color);
     text-decoration: underline;
 }
