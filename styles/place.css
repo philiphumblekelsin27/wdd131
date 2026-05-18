@@ -60,18 +60,12 @@ h2 {
     margin: 0;
 }
 
-.stats li,
-.weather-info p {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
 .stats li span,
 .weather-info p span {
+    color: #000000;
     font-weight: bold;
 }
+
 
 .weather-icon-mobile {
     display: block;
