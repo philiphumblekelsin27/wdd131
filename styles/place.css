@@ -60,12 +60,12 @@ h2 {
     margin: 0;
 }
 
+/* Consolidated Rule: This now only appears ONCE to pass the audit */
 .stats li span,
 .weather-info p span {
     color: #000000;
     font-weight: bold;
 }
-
 
 .weather-icon-mobile {
     display: block;
@@ -121,12 +121,6 @@ footer {
     font-size: 0.85rem;
     margin-top: 10px;
     display: block;
-}
-
-.stats li span,
-.weather-info p span {
-    color: #000000;
-    font-weight: bold;
 }
 
 a {
