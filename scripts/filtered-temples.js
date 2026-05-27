@@ -1,0 +1,65 @@
+const temples = [
+    { templeName: "Aba Nigeria", location: "Aba, Nigeria", dedicated: "2005, August, 7", area: 11500, imageUrl: "images/temple-05.webp" },
+    { templeName: "Manti Utah", location: "Manti, Utah, United States", dedicated: "1888, May, 21", area: 74792, imageUrl: "images/temple-10.webp" },
+    { templeName: "Payson Utah", location: "Payson, Utah, United States", dedicated: "2015, June, 7", area: 96630, imageUrl: "images/temple-11.webp" },
+    { templeName: "Yigo Guam", location: "Yigo, Guam", dedicated: "2020, May, 2", area: 6861, imageUrl: "images/temple-56.webp" },
+    { templeName: "Washington D.C.", location: "Kensington, Maryland, United States", dedicated: "1974, November, 19", area: 156558, imageUrl: "images/temple-31.webp" },
+    { templeName: "Lima Perú", location: "Lima, Perú", dedicated: "1986, January, 10", area: 9600, imageUrl: "images/temple-34.webp" },
+    { templeName: "Mexico City Mexico", location: "Mexico City, Mexico", dedicated: "1983, December, 2", area: 116642, imageUrl: "images/temple-32.webp" },
+    { templeName: "Salt Lake", location: "Salt Lake City, Utah, United States", dedicated: "1893, April, 6", area: 253015, imageUrl: "images/temple-02.webp" },
+    { templeName: "Lagos Nigeria", location: "Lagos, Nigeria", dedicated: "2020, January, 1", area: 15000, imageUrl: "images/temple-01.webp" },
+    { templeName: "St. George Utah", location: "St. George, Utah, United States", dedicated: "1877, April, 6", area: 143969, imageUrl: "images/temple-33.webp" }
+];
+
+const grid = document.querySelector(".res-grid");
+const title = document.querySelector("#display-title");
+
+function displayTemples(filteredTemples) {
+    grid.innerHTML = "";
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("section");
+        card.classList.add("temple-card");
+        card.innerHTML = `
+            <h3>${temple.templeName}</h3>
+            <p><span class="label">Location:</span> ${temple.location}</p>
+            <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
+            <p><span class="label">Area:</span> ${temple.area.toLocaleString()} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250">
+        `;
+        grid.appendChild(card);
+    });
+}
+document.querySelector("#home-link").addEventListener("click", () => {
+    title.textContent = "Home";
+    displayTemples(temples);
+});
+
+document.querySelector("#old-link").addEventListener("click", () => {
+    title.textContent = "Old";
+    displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900));
+});
+
+document.querySelector("#new-link").addEventListener("click", () => {
+    title.textContent = "New";
+    displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000));
+});
+
+document.querySelector("#large-link").addEventListener("click", () => {
+    title.textContent = "Large";
+    displayTemples(temples.filter(t => t.area > 90000));
+});
+
+document.querySelector("#small-link").addEventListener("click", () => {
+    title.textContent = "Small";
+    displayTemples(temples.filter(t => t.area < 10000));
+});
+displayTemples(temples);
+const hambutton = document.querySelector('#menu');
+const mainnav = document.querySelector('.navigation');
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('open');
+    hambutton.classList.toggle('open');
+});
+
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;

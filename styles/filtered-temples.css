@@ -1,0 +1,126 @@
+:root {
+    --primary: #1e3a4e;
+    --secondary: #ecf0f1;
+    --accent: #d35400;
+    --white: #ffffff;
+    --text: #212121;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    color: var(--text);
+    margin: 0;
+}
+
+header {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navigation li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1.2rem;
+    display: block;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.navigation li a:hover {
+    color: var(--accent);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.temple-card {
+    background: var(--white);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.temple-card h3 {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+.temple-card p {
+    padding: 0 15px;
+    margin: 10px 0;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--primary);
+    display: inline-block;
+    width: 90px;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 250;
+    display: block;
+    object-fit: cover;
+}
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}

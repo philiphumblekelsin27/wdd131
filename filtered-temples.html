@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Filtered Temple Album - Philip Humble Kelsin</title>
+    <meta name="description"
+        content="A high-performance dynamic temple gallery for WDD 131. Features filtering by age and size with optimized lazy-loaded images.">
+    <meta name="author" content="Philip Humble Kelsin">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle Menu Navigation"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="old-link">Old</a></li>
+                <li><a href="#" id="new-link">New</a></li>
+                <li><a href="#" id="large-link">Large</a></li>
+                <li><a href="#" id="small-link">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="display-title">Home</h2>
+        <div class="res-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Philip Humble Kelsin | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
