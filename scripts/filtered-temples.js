@@ -53,7 +53,9 @@ document.querySelector("#small-link").addEventListener("click", () => {
     title.textContent = "Small";
     displayTemples(temples.filter(t => t.area < 10000));
 });
+
 displayTemples(temples);
+
 const hambutton = document.querySelector('#menu');
 const mainnav = document.querySelector('.navigation');
 hambutton.addEventListener('click', () => {

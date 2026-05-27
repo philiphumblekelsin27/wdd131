@@ -21,9 +21,25 @@ header {
     position: relative;
 }
 
-h1 {
-    margin: 0;
+header span {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.navigation.open {
+    max-height: 500px;
 }
 
 .navigation li a {
@@ -47,7 +63,7 @@ h1 {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .temple-card {
@@ -94,7 +110,7 @@ h1 {
     color: white;
     cursor: pointer;
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     right: 1rem;
 }
 
@@ -104,18 +120,6 @@ h1 {
 
 #menu.open::before {
     content: "❌";
-}
-
-.navigation {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation.open {
-    display: flex;
-    flex-direction: column;
 }
 
 footer {

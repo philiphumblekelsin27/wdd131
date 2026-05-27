@@ -4,7 +4,7 @@
     }
 
     .navigation {
-        display: flex;
+        max-height: none;
         flex-direction: row;
         justify-content: center;
     }
