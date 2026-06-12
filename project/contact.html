@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry | Benin City Digital Guide</title>
+    <meta name="description"
+        content="Contact the Benin City Digital Guide for tour inquiries and cultural information.">
+    <meta name="author" content="Humble Philip">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Benin City Logo" width="50" height="50">
+            <span>Ancient Benin Guide</span>
+        </a>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="contact.html" class="active">Inquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-main">
+        <h1>Tour Inquiry Form</h1>
+        <p>Plan your visit to the historical heart of Edo State. Our guides are ready to assist.</p>
+
+        <form method="get" action="thanks.html" class="tour-form">
+            <fieldset>
+                <legend>Visitor Information</legend>
+                <label for="fname">Full Name*</label>
+                <input type="text" id="fname" name="fname" required placeholder="Enter your name">
+
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required placeholder="email@example.com">
+            </fieldset>
+
+            <fieldset>
+                <legend>Trip Details</legend>
+                <label for="interest">Primary Interest</label>
+                <select id="interest" name="interest">
+                    <option value="bronzes">Benin Bronzes & Arts</option>
+                    <option value="palace">Royal History & Palace</option>
+                    <option value="nature">Okomu Park & Wildlife</option>
+                </select>
+
+                <label for="message">Message/Special Requests</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Request Tour Guide Information</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Philip Humble Kelsin | Nigeria</p>
+        <p id="lastModified"></p>
+        <p>Your Visits: <span id="visit-count">0</span></p>
+    </footer>
+</body>
+
+</html>

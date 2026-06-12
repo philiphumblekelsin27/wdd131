@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions | Benin City Heritage Guide</title>
+    <meta name="description"
+        content="Discover historical landmarks, museums, and parks in Benin City using our interactive directory.">
+    <meta name="author" content="Humble philip">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/attractions.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Benin City Logo" width="50" height="50">
+            <span>Ancient Benin Guide</span>
+        </a>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html" class="active">Attractions</a></li>
+                <li><a href="contact.html">Inquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Explore Benin City</h1>
+        <p class="intro-text">Browse through our curated list of historical sites, royal museums, and natural parks.</p>
+        <div class="filter-controls">
+            <button id="filter-all">All</button>
+            <button id="filter-museum">Museums</button>
+            <button id="filter-historical">Historical</button>
+            <button id="filter-park">Parks</button>
+        </div>
+        <div id="attractions-container" class="attraction-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Philip Humble Kelsin | Nigeria</p>
+        <p id="lastModified"></p>
+        <p>User Visits: <span id="visit-count">0</span></p>
+    </footer>
+</body>
+
+</html>
